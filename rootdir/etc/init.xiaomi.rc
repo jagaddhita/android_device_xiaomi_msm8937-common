@@ -4,3 +4,6 @@ service vendor.xiaomi_script /vendor/bin/init.xiaomi.sh
     class main
     user root
     oneshot
+
+on property:dev.bootcomplete=1
+    restart ril-daemon
