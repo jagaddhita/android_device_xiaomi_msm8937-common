@@ -55,7 +55,9 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 endif
 
-ifneq ($(wildcard vendor/qcom/sdclang-8.0/linux-x86_64),)
+ifneq ($(wildcard vendor/qcom/sdclang-10.0/linux-x86_64),)
+TARGET_KERNEL_CLANG_PATH := $(PWD)/vendor/qcom/sdclang-10.0/linux-x86_64
+else ifneq ($(wildcard vendor/qcom/sdclang-8.0/linux-x86_64),)
 TARGET_KERNEL_CLANG_PATH := $(PWD)/vendor/qcom/sdclang-8.0/linux-x86_64
 endif
 
