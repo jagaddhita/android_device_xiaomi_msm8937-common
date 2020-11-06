@@ -631,7 +631,9 @@ service baseband-sh /vendor/bin/init.baseband.sh
     class late_start
     user root
     oneshot
+    disabled
 
 on property:dev.bootcomplete=1
     restart ril-daemon
+    start baseband-sh
     swapon_all /vendor/etc/fstab.qcom
