@@ -112,6 +112,9 @@ void vendor_load_properties()
     property_set("dalvik.vm.heapminfree", heapminfree);
     property_set("dalvik.vm.heapmaxfree", heapmaxfree);
 
+    // Build Display ID
+    property_override("ro.build.display.id","By @Mi-MSM8937");
+
     // Pixel identification
     property_override("ro.build.description","redfin-user 11 RD1A.200810.020 6792687 release-keys");
     property_override("ro.build.fingerprint","google/redfin/redfin:11/RD1A.200810.020/6792687:user/release-keys");
