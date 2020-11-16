@@ -2,6 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 # Init scripts
 
+ifneq ($(PRODUCT_DEVICE), tiare)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
@@ -13,6 +14,7 @@ LOCAL_SRC_FILES    := fstab.qcom
 endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
+endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.9)
 include $(CLEAR_VARS)
