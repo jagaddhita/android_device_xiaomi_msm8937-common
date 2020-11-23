@@ -44,12 +44,16 @@ ro.qualcomm.bt.hci_transport=smd
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
 camera.display.umax=1920x1080 \
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+
+ifneq ($(PRODUCT_DEVICE), land)
+PRODUCT_PROPERTY_OVERRIDES += \
 camera.lowpower.record.enable=1 \
 media.camera.ts.monotonic=1 \
 persist.camera.isp.clock.optmz=0 \
 persist.vendor.qti.telephony.vt_cam_interface=1 \
 vidc.enc.dcvs.extra-buff-count=2
+endif
 
 ifneq ($(PRODUCT_DEVICE), land)
 PRODUCT_PROPERTY_OVERRIDES += \
