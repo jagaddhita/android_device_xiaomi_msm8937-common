@@ -144,6 +144,13 @@ static void build_keys_override(const char *build_keys)
     property_override("ro.vendor.build.tags", build_keys);
 }
 
+static void enable_iorap()
+{
+	property_override("ro.iorapd.enable","true");
+	property_override("iorapd.perfetto.enable","true");
+	property_override("iorapd.readahead.enable","true");
+}
+
 void vendor_load_properties()
 {
     check_device();
@@ -159,6 +166,9 @@ void vendor_load_properties()
     SetSafetyNetProps();
 
     build_keys_override("release-keys");
+
+    // IORap
+    enable_iorap();
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);

@@ -218,3 +218,9 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 # GSI
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.miui.density_v2=267
+
+# IORap
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+ro.iorapd.enable=true \
+iorapd.perfetto.enable=true \
+iorapd.readahead.enable=true
