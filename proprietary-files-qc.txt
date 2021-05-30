@@ -749,8 +749,8 @@ vendor/lib/mediadrm/libwvdrmengine.so|3fac3fa919b3680fdbde4bb8880d3488ae801863|7
 vendor/lib64/libwvhidl.so|3288acf6c988c52a72029bef79da4d0fe8a72015|7161a1f0992da071e842655fcd42f20fa36909ac
 vendor/lib64/mediadrm/libwvdrmengine.so|77ecb3694aa9f60682c6de30322ced8f0da017ce|221b4daf14c4938a710dfe942d4c55af9906b907
 
-# Wi-Fi - from daisy
-vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
+# Wi-Fi - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
+vendor/bin/wcnss_service|42d6db361ceacb15eb6560cdc91dbda87ab7f7c5
 
 # Wi-Fi Display - from daisy
 bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7
