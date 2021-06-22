@@ -29,11 +29,13 @@
  */
 
 #include <cstdlib>
+#include <cstring>
 #include <fstream>
 #include <string.h>
 #include <sys/sysinfo.h>
 #include <unistd.h>
 
+#include <android-base/file.h>
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -144,6 +146,39 @@ static void build_keys_override(const char *build_keys)
     property_override("ro.vendor.build.tags", build_keys);
 }
 
+static void set_model_name(const char *model_name)
+{
+    property_override("ro.product.model", model_name);
+    property_override("ro.product.odm.model", model_name);
+    property_override("ro.product.product.model", model_name);
+    property_override("ro.product.system.model", model_name);
+    property_override("ro.product.system_ext.model", model_name);
+    property_override("ro.product.vendor.model", model_name);
+}
+
+static void load_mi8937_model_name()
+{
+    std::string tempstr;
+    if(android::base::ReadFileToString("/proc/device-tree/xiaomi,device", &tempstr)) {
+        const char *fdt_xiaomi_device = tempstr.c_str();
+        if (strcmp(fdt_xiaomi_device, "land") == 0) {
+            set_model_name("Redmi 3(S/SP/X)");
+        } else if (strcmp(fdt_xiaomi_device, "prada") == 0) {
+            set_model_name("Redmi 4");
+        } else if (strcmp(fdt_xiaomi_device, "riva") == 0) {
+            set_model_name("Redmi 5A");
+        } else if (strcmp(fdt_xiaomi_device, "rolex") == 0) {
+            set_model_name("Redmi 4A");
+        } else if (strcmp(fdt_xiaomi_device, "santoni") == 0) {
+            set_model_name("Redmi 4X");
+        } else if (strcmp(fdt_xiaomi_device, "ugg") == 0) {
+            set_model_name("Redmi Note 5A / Y1 Prime");
+        } else if (strcmp(fdt_xiaomi_device, "ugglite") == 0) {
+            set_model_name("Redmi Note 5A / Y1 Lite");
+        }
+    }
+}
+
 static void enable_iorap()
 {
 	property_override("ro.iorapd.enable","true");
@@ -153,6 +188,8 @@ static void enable_iorap()
 
 void vendor_load_properties()
 {
+    load_mi8937_model_name();
+
     check_device();
 
     build_description_override("redfin-user 11 RQ3A.210605.005 7349499 release-keys");
