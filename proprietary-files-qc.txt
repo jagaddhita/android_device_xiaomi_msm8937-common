@@ -366,13 +366,25 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|24832c2eb82d500a98ecc24787270106202b7964
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|7db1d6865fb1589e9e7f97c3e1c59ae5ab505ead
 
-# Graphics firmware - from daisy
-vendor/firmware/a506_zap.b00|c45a7b34456844f5deb73e2dce79cbfcfb9ae71c
-vendor/firmware/a506_zap.b01|00a618f9ecde71e169200fbdc60428c81bab144c
-vendor/firmware/a506_zap.b02|b79957c47f0a6757ac1d721dbe06551508454634
-vendor/firmware/a506_zap.mdt|2945f21b47cf35bf22d8cb68e937c34ea64212c0
-vendor/firmware/a530_pfp.fw|448f9db8271fefb08348cbc50409e8e95bd93f78
-vendor/firmware/a530_pm4.fw|5741a28752355b478d455635bab008028ff7e1c6
+# Graphics firmware - from nokia
+vendor/firmware/a300_pfp.fw|899dbfad4812084971cfc1ff30f06a4b45c2d34c
+vendor/firmware/a300_pm4.fw|94529206b45b6e9f6ed30dadabe4244a88a60975
+vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
+vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
+vendor/firmware/a506_zap.b00|21d74ee137e4096c2ffcd6f2545b5b2f8f384efa
+vendor/firmware/a506_zap.b01|9d82e45748e86cf1502b839c5f9f4a24c27bf7fb
+vendor/firmware/a506_zap.b02|3e301fa5905acd05f15836959595791c1241a017
+vendor/firmware/a506_zap.elf|e7c5cdf56d91d08cb4d6e56b13d6f54eb217fdd1
+vendor/firmware/a506_zap.mdt|2119da06ffb43ac1c08dbfc4951bb295807c802d
+vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
+vendor/firmware/a530_pfp.fw|35b72dce880191ff087af2524205afce40ea8c97
+vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
+vendor/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
+vendor/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
+vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
+vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
+vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
+vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
 # Ipacm - from daisy
 vendor/bin/ipacm-diag|9300f8da22941c2bfacc2ff96f83f2beebd4dcc1
