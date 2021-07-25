@@ -205,7 +205,7 @@ void vendor_load_properties()
     build_keys_override("release-keys");
 
     // IORap
-    enable_iorap();
+    //enable_iorap();
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
