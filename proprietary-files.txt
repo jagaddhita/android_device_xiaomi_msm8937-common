@@ -207,9 +207,6 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
-# Charger
-vendor/bin/hvdcp_opti
-
 # DPM
 framework/tcmclient.jar
 product/bin/dpmd
