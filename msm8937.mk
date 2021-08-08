@@ -357,9 +357,11 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
 # Vibrator
+ifeq ($(filter land santoni,$(DEVICE)),)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
+endif
 
 # Wifi
 PRODUCT_PACKAGES += \

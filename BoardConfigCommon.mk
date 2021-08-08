@@ -96,6 +96,9 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 ifneq ($(TARGET_DEVICE),tiare)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-nontiare.xml
 endif
+ifeq ($(filter land santoni,$(TARGET_DEVICE)),)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-vibrator.xml
+endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # HW crypto
