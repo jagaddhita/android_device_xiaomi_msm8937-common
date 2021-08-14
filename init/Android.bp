@@ -4,15 +4,19 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_library_static {
-    name: "libinit_msm8937",
-    recovery_available: true,
-    srcs: ["init_msm8937.cpp"],
+cc_defaults {
+    name: "libinit_msm8937_defaults",
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
     ],
-    shared_libs: [
-        "libbase",
-    ]
+    shared_libs: ["libbase"],
+    recovery_available: true,
+}
+
+cc_library_static {
+    name: "libinit_msm8937",
+    defaults: ["libinit_msm8937_defaults"],
+    srcs: ["libinit_msm8937.cpp"],
+    export_include_dirs: ["include"],
 }
