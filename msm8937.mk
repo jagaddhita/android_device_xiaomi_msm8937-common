@@ -381,12 +381,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# Wi-Fi Display
-PRODUCT_PACKAGES += \
-    libnl
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)
